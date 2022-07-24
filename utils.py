@@ -229,7 +229,7 @@ def get_moco_dataset(hparams: ModelParams) -> DatasetBase:
             transform_train=transforms.split_transform, transform_test=transforms.get_test_transform()
         )
     else:
-        raise NotImplementedError(f"Dataset {name} not defined")
+        raise NotImplementedError(f"Dataset {hparams.dataset_name} not defined")
 
 
 def get_class_transforms(crop_size, resize):
